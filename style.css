@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1B2430;
+}
+
+.container {
+    width: 30rem;
+    height: 20rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.ball {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 3rem;
+    height: 10rem;
+}
+
+.half-1{
+    position: absolute;
+    top: 5rem;
+    background-image: linear-gradient(to right, rgba(47, 134, 166,1), rgba(52, 190, 130,1), rgba(47, 221, 146,1));
+    width: 3rem;
+    height: 1.5rem;
+    border-radius: 40px 40px 0 0;
+}
+
+.half-2{
+    position: absolute;
+    top: 6.5rem;
+    background-image: linear-gradient(to right, rgba(47, 134, 166,1), rgba(52, 190, 130,1), rgba(47, 221, 146,1));
+    width: 3rem;
+    height: 1.5rem;
+    border-radius: 0 0 40px 40px;
+}
+
+.ball-1 .half-1{
+    animation: shrink-1 .5s ease-in-out .1s infinite alternate forwards;
+}
+.ball-1 .half-2{
+    animation: shrink-2 .5s ease-in-out .1s infinite alternate forwards;
+}
+
+.ball-2 .half-1{
+    animation: shrink-1 .5s ease-in-out .2s infinite alternate forwards;
+}
+.ball-2 .half-2{
+    animation: shrink-2 .5s ease-in-out .2s infinite alternate forwards;
+}
+
+.ball-3 .half-1{
+    animation: shrink-1 .5s ease-in-out .3s infinite alternate forwards;
+}
+.ball-3 .half-2{
+    animation: shrink-2 .5s ease-in-out .3s infinite alternate forwards;
+}
+
+@keyframes shrink-1 {
+    0% {top: 5rem; height: 1.5rem;}
+    25% {top: 7.25rem; height: 1.5rem;}
+    50% {top: 9.5rem; height: 1.5rem;}
+    75% {top: 11.75rem; height: 1.5rem;}
+    100% {top: 14rem; height: .5rem; border-radius: 50px 50px 0 0;}
+}
+
+@keyframes shrink-2 {
+    0% {top: 6.5rem; height: 1.5rem;}
+    25% {top: 8.75rem; height: 1.5rem;}
+    50% {top: 11rem; height: 1.5rem;}
+    75% {top: 13.25rem; height: 1.5rem;}
+    100% {top: 14.5rem; height: .5rem;}
+}
+
+.sub {
+    width: 3rem;
+    height: .3rem;
+    background-image: linear-gradient(to right, rgba(47, 134, 166,1), rgba(52, 190, 130,1), rgba(47, 221, 146,1));
+    border-radius: 40px;
+    filter: opacity(25%) blur(2px);
+    animation: shrink-3 .5s ease-in-out infinite alternate forwards;
+}
+
+@keyframes shrink-3 {
+    0% {width: .5rem;}
+    25% {width: 1rem;}
+    50% {width: 1.5rem;}
+    75% {width: 2rem;}
+    100% {width: 3rem;}
+}
